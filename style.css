@@ -110,5 +110,83 @@ font-size: 24px;
 line-height: 36px;
 letter-spacing: 0em;
 text-align: left;
+color: #495057;
 }
+
+.copy{
+    position: absolute;
+    width: 336px;
+    height: 67px;
+    top: 845px;
+    left: 32px;
+    padding: 24px;
+    border-radius: 24px;
+    color: #0A3871;
+    background: none;
+    border: 1px solid #0A3871;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.mensajeButton{
+    position: absolute;
+    width: 229px;
+    height: 18px;
+    top: 851px;
+    left: 240px;
+}
+
+.mensajeButton img, p{
+    display: inline-block;
+}
+
+.imagenExclamacion{
+    width: 16px;
+    height: 16px;
+}
+
+.mensajeButton p{
+    position: absolute;
+    width: 205px;
+    height: 18px;
+    opacity: 0.8px;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 0 0 5px;
+}
+
+.cajaButton{
+    position: absolute;
+    width: 680px;
+    height: 67px;
+    top: 885px;
+    left: 240px;
+}
+
+.encriptar, .desencriptar{
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    border-radius: 24px;
+}
+
+.encriptar{
+    background: #0A3871;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.desencriptar{
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    border-radius: 24px;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
 

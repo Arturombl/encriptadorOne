@@ -15,10 +15,10 @@
         </div>
     </header>
     <main>
-        <div class="capturaUsuario">
+        <section class="capturaUsuario">
             <textarea name="mensajeAEncriptar" class="mensaje" placeholder="Ingrese el texto aqui" required></textarea>
-        </div>
-        <div class="areaDesencriptado">
+        </section>
+        <section class="areaDesencriptado">
         <!--<div class="cajaAntes">
                 <div class="muñeco">
                     <img class="imagenMuñeco" src="/imagenes/Muñeco.png" alt="Imagen descriptiva de que falta algo para desencriptar">
@@ -34,10 +34,21 @@
                     <p class="mensajeResultado">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</p>
                 </div>
                 <div class="buttonCopy">
-                    <button>
+                    <!--<button onclick="" class="copy">Copiar</button>-->
+                    
+                    <button class="copy" onclick="copiarTexto()">Copiar Texto</button>
                 </div>
             </div>
-        </div>
+        </section>
+        <section class="areaButton">
+            <div class="mensajeButton">
+                <img class = "imagenExclamacion" src="/imagenes/bi_exclamation-circle-fill.png" alt="Signo de exclamacion"><p>Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="cajaButton">
+                <button class="encriptar" onclick="encriptar()">Encriptar</button>
+                <button class="desencriptar" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </section>
         <script>
             const textarea = document.querySelector("textarea");
             textarea.addEventListener("keyup", e =>{
