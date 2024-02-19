@@ -1,4 +1,6 @@
 body {
+    position: relative;
+    width: 100%;
     background: #F3F5FC;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -6,7 +8,44 @@ body {
     font-style: normal;
     font-variation-settings: "slnt" 0;
 }
+header{
+
+}
 
 .logo {
-    margin: 40px 0 40px 40px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.capturaUsuario{
+    position: absolute;
+    background: #F3F5FC;
+    width: 577px;
+    height: 240px;
+    top: 168px;
+    left: 240px;
+}
+
+.mensaje::placeholder{
+    font-size: 32px;
+    line-height: 48px;
+    outline: none;
+    color: #0A3871;
+}
+
+.mensaje{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #F3F5FC;
+    padding: 0;
+    height: auto;
+    font-size: 32px;
+    line-height: 34px;
+    color: #0A3871;
+    resize: none;
+}
+
+textarea::-webkit-scrollbar{
+    width: 0;
 }
