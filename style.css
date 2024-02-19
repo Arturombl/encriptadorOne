@@ -200,4 +200,50 @@ color: #495057;
     font-weight: bold;
 }
 
+@media screen and (max-width:480px) {
+    header, .cajaPrincipal, .areaDesencriptado {
+        display: inline;
+        width: 100vh;
+    }
+    .titulo {
+        width: 250px;
+        font-size: 20px;
+        top: 44px;
+        left: 90px;
+    }
+    .logo {
+        top: 40px;
+        left: 0;
+    }
+    .capturaUsuario{
+        width: 90%;
+        left: 20px;
+    }
+    .mensaje::placeholder{
+        font-size: 24px;
+        text-align: center;
+    }
+    .mensaje{
+        font-size: 24px;
+    }
+    .mensajeButton {
+        top: 500px;
+        left: 20px;
+    }
+    .cajaButton{
+        width: 100%;
+        top: 530px;
+        left: 4%;
+    }
+    .encriptar, .desencriptar{
+        width: 45%;
+    }
+    .areaDesencriptado {
+        width: 90%;
+        left: 5%;
+        top: 630px;
+    }
+
+}
+
 
