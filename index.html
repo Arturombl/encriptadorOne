@@ -17,13 +17,13 @@
     </header>
     <main>
         <section class="cajaPincipal">
-            <div class="capturaUsuario">
-                <textarea name="mensajeAEncriptar" class="mensaje" placeholder="Ingrese el texto aqui" required></textarea>
-            </div>
+            <form id="formulario" class="capturaUsuario">
+                <textarea name="mensajeAEncriptar" id="mensajeUsuario" class="mensaje" placeholder="Ingrese el texto aqui" required autocomplete="off" onkeypress="return(event.charCode>=97 && event.charCode<=122)"></textarea>
+            </form>
         </section>
         <section class="areaDesencriptado">
         <div class="cajaAntes">
-                <div class="muñeco">
+                <div id="antes" class="muñeco">
                     <img class="imagenMuñeco" src="/imagenes/Muñeco.png" alt="Imagen descriptiva de que falta algo para desencriptar">
                 </div>
                 <div class="advertenciaSugerencia">
@@ -32,13 +32,13 @@
                 </div>
             </div>
         
-            <!--<div class="cajaDespues">
+            <div id="despues" class="cajaDespues">
                 <div class="cajaMensaje">
                     <p class="mensajeResultado">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</p>
                 </div>
-                <div class="buttonCopy">                    
+                <div class="buttonCopy">                        
                     <button class="copy" onclick="copiarTexto()">Copiar Texto</button>
-                </div>-->
+                </div>
             </div>
         </section>
         <section class="areaButton">
@@ -46,18 +46,11 @@
                 <img class = "imagenExclamacion" src="/imagenes/bi_exclamation-circle-fill.png" alt="Signo de exclamacion"><p>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="cajaButton">
-                <button class="encriptar" onclick="encriptar()">Encriptar</button>
-                <button class="desencriptar" onclick="desencriptar()">Desencriptar</button>
+                <button class="encriptar" onclick= "return encriptar()">Encriptar</button>
+                <button class="desencriptar" onclick= "return desencriptar()">Desencriptar</button>
             </div>
         </section>
-        <script>
-            const textarea = document.querySelector("textarea");
-            textarea.addEventListener("keyup", e =>{
-                let scHeight = e.target.scrollHeight;
-                textarea.style.height = "auto";
-                textarea.style.height = `${scHeight}px`; 
-            })
-        </script>
+        <script src="app.js" defer></script>
     </main>
     
 </body>
