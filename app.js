@@ -26,31 +26,29 @@ function validar(){
 
 //funcion para encriptar
 function encriptar() {
-    console.log(validar());
-    let isValid = validar();
-    mensaje = document.getElementById('mensajeUsuario').value;
-    if(isValid === true){
-        for(let i=0;i<letras.length; i++){
-            mensaje = mensaje.replace(letras[i],silavas[i]);
-            console.log(mensaje);
-        }
-        restablecer();
-        return mensaje;
-    }else{
-        alert('Solo se admiten letras minusculas y sin acentos, Igresa otro mensaje');
-    }
-    restablecer();
+   encriptarDesencriptar(letras, silavas);
 }
 
 //funcion para desencriptar
 function desencriptar() {
-    let mensaje = document.getElementById('mensajeUsuario').value;
-    for(let i=0;i<letras.length; i++){
-        mensaje = mensaje.replace(silavas[i],letras[i]);
-        console.log(mensaje);
+    encriptarDesencriptar(silavas, letras)
+}
+
+//funcion proceso de encriptado y desencriptado
+function encriptarDesencriptar(arreglo1, arreglo2){
+    let isValid = validar();
+    mensaje = document.getElementById('mensajeUsuario').value;
+    if(isValid === true){
+        for(let i=0;i<letras.length; i++){
+            mensaje = mensaje.replaceAll(arreglo1[i],arreglo2[i]);
+            console.log(mensaje);
+        }
+        restablecer();
+        return mostrarMensaje(mensaje)
+    }else{
+        alert('Solo se admiten letras minusculas y sin acentos, Igresa otro mensaje');
     }
-    formulario.reset();
-    return mensaje;
+    restablecer();
 }
 
 //funcion para limpiar el texarea y posicionar el cursor
@@ -65,3 +63,10 @@ function valoresIniciales(){
 }
 
 valoresIniciales();
+
+//Funcion para mostrar el mensaje
+function mostrarMensaje(texto){
+    document.getElementById('antes').style.display = 'none'
+    document.getElementById('despues').style.display = 'block'
+    document.getElementById('parrafo').textContent = texto;
+}

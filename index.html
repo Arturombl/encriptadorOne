@@ -22,8 +22,8 @@
             </form>
         </section>
         <section class="areaDesencriptado">
-        <div class="cajaAntes">
-                <div id="antes" class="muñeco">
+        <div id="antes" class="cajaAntes">
+                <div class="muñeco">
                     <img class="imagenMuñeco" src="/imagenes/Muñeco.png" alt="Imagen descriptiva de que falta algo para desencriptar">
                 </div>
                 <div class="advertenciaSugerencia">
@@ -34,7 +34,7 @@
         
             <div id="despues" class="cajaDespues">
                 <div class="cajaMensaje">
-                    <p class="mensajeResultado">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</p>
+                    <p id= "parrafo" class="mensajeResultado"></p>
                 </div>
                 <div class="buttonCopy">                        
                     <button class="copy" onclick="copiarTexto()">Copiar Texto</button>
@@ -46,8 +46,8 @@
                 <img class = "imagenExclamacion" src="/imagenes/bi_exclamation-circle-fill.png" alt="Signo de exclamacion"><p>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="cajaButton">
-                <button class="encriptar" onclick= "return encriptar()">Encriptar</button>
-                <button class="desencriptar" onclick= "return desencriptar()">Desencriptar</button>
+                <button id="boton1" class="encriptar" onclick= "return encriptar()">Encriptar</button>
+                <button id="boton2" class="desencriptar" onclick= "return desencriptar()">Desencriptar</button>
             </div>
         </section>
         <script src="app.js" defer></script>
