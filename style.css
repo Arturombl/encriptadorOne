@@ -1,5 +1,6 @@
 body {
-    position: relative;
+    /*position: relative;*/
+    width: 100vh;
     background: #F3F5FC;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -8,41 +9,45 @@ body {
     font-variation-settings: "slnt" 0;
 }
 
-header, .cajaPrincipal, .areaDesencriptado, .areaButton{
+header, .cajaPrincipal, .areaButton{
     position: relative;
 }
 
-.titulo{
+.titulo, .logo, .capturaUsuario, .areaDesencriptado, .muñeco, .advertenciaSugerencia, .cajaMensaje, .copy, .mensajeButton, .cajaButton, .mensajeButton p{
     position: absolute;
-    width: 400px;
+}
+
+.titulo{
+    width: 55%;
     height: auto;
-    font-size: 30px;
+    font-size: 1.9em;
     font-weight: bold;
     color: #0A3871;
     text-align: left;
-    top: 37px;
+    top: 35px;
     left: 140px;
 }
 
 .logo {
-    position: absolute;
    top: 40px;
     left: 40px;
 }
 .capturaUsuario{
-    position: absolute;
     background: #F3F5FC;
     width: 500px;
     height: 288px;
     top: 200px;
     left: 220px;
 }
-
-.mensaje::placeholder{
+.mensaje::placeholder, .mensaje, .cajaMensaje p{
     font-size: 32px;
     line-height: 48px;
-    outline: none;
     color: #0A3871;
+}
+
+
+.mensaje::placeholder{
+    outline: none;
 }
 
 .mensaje{
@@ -52,9 +57,6 @@ header, .cajaPrincipal, .areaDesencriptado, .areaButton{
     background: #F3F5FC;
     padding: 0;
     height: auto;
-    font-size: 32px;
-    line-height: 34px;
-    color: #0A3871;
     resize: none;
 }
 
@@ -63,7 +65,6 @@ textarea::-webkit-scrollbar{
 }
 
 .areaDesencriptado{
-    position: absolute;
     width: 400px;
     height: 700px;
     top: 30px;
@@ -73,7 +74,6 @@ textarea::-webkit-scrollbar{
 }
 
 .muñeco{
-    position: absolute;
     width: 336px;
     height: auto;
     top: 133px;
@@ -81,7 +81,6 @@ textarea::-webkit-scrollbar{
 }
 
 .advertenciaSugerencia{
-    position: absolute;
     width: 336px;
     height: 122px;
     top: 469px;
@@ -110,38 +109,27 @@ textarea::-webkit-scrollbar{
 }
 
 .cajaMensaje{
-    position: absolute;
     width: 90%;
-    height: 80%;
+    height: 70%;
     top: 4%;
     left: 5%;
 }
 
 .cajaMensaje p{
-font-size: 24px;
-line-height: 36px;
 letter-spacing: 0em;
 text-align: left;
 color: #495057;
 }
 
 .copy{
-    position: absolute;
-    width: 336px;
-    height: 67px;
     top: 600px;
     left: 32px;
-    padding: 24px;
-    border-radius: 24px;
     color: #0A3871;
     background: none;
     border: 1px solid #0A3871;
-    font-size: 18px;
-    font-weight: bold;
 }
 
 .mensajeButton{
-    position: absolute;
     width: 229px;
     height: 18px;
     top: 590px;
@@ -158,7 +146,6 @@ color: #495057;
 }
 
 .mensajeButton p{
-    position: absolute;
     width: 205px;
     height: 18px;
     opacity: 0.8px;
@@ -168,40 +155,33 @@ color: #495057;
 }
 
 .cajaButton{
-    position: absolute;
     width: 680px;
     height: 67px;
     top: 628px;
     left: 220px;
 }
 
-.encriptar, .desencriptar{
+.encriptar, .desencriptar, .copy{
     width: 328px;
     height: 67px;
     padding: 24px;
     border-radius: 24px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .encriptar{
     background: #0A3871;
     color: #FFFFFF;
-    font-size: 18px;
-    font-weight: bold;
 }
 
 .desencriptar{
-    width: 328px;
-    height: 67px;
-    padding: 24px;
-    border-radius: 24px;
     color: #0A3871;
     border: 1px solid #0A3871;
-    font-size: 18px;
-    font-weight: bold;
 }
 
 @media screen and (max-width:480px) {
-    header, .cajaPrincipal, .areaDesencriptado {
+    header, .cajaPrincipal, .areaDesencriptado, .areaButton{
         display: inline;
         width: 100vh;
     }
