@@ -2,13 +2,13 @@ let mensaje;
 const letras = ['e', 'i', 'a', 'o', 'u'];
 const silavas = ['enter', 'imes', 'ai', 'ober', 'ufat'];
 
-//funcion que permite tener un cuadro de texto dinamico
+//funcion que permite tener un textArea dinamico
 const textarea = document.querySelector('textarea');
-    textarea.addEventListener('keyup', e =>{
-        let scHeight = e.target.scrollHeight;
-        textarea.style.height = 'auto';
-        textarea.style.height = `${scHeight}px`; 
-    })
+    textarea.addEventListener('DOMContentLoaded', () => {
+        area.forEach((elemento) => {
+          elemento.style.height = `${elemento.scrollHeight}px`
+        })
+      })    
 
 //funcion para validar si solo se escribieron letras minusculas sin acento
 function validar(){
@@ -69,4 +69,13 @@ function mostrarMensaje(texto){
     document.getElementById('antes').style.display = 'none'
     document.getElementById('despues').style.display = 'block'
     document.getElementById('parrafo').textContent = texto;
+}
+
+function copiarTexto(){
+    let content = document.getElementById('parrafo');
+    content.select();
+    content.setSelectionRange(0,99999);
+    navigator.clipboard.writeText(content.value);
+
+    alert('El texto se a copiado '+ content.value);
 }

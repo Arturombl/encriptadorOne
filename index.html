@@ -6,54 +6,62 @@
     <title>Challenge Encriptador</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <title>Encriptador OracleONE</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1 class="titulo">Bienvenidos a tu software libre de encripacion</h1>
-        <div class="logo">
-            <img class="imagenlogo" src="/imagenes/logo.png" alt="Logo Alura Latam">
-        </div>
+        <div class="contenedorTitulo"><h1 class="titulo">Bienvenidos a tu software libre de encripacion</h1></div>
     </header>
-
     <main>
-        <section class="cajaPincipal">
-            <form id="formulario" class="capturaUsuario">
-                <textarea name="mensajeAEncriptar" id="mensajeUsuario" class="mensaje" placeholder="Ingrese el texto aqui" required autocomplete="off" autofocus></textarea>
-            </form>
-        </section>
+        <div class="contenedor">
+            <section class="contenedorLogo">
+                <div class="itemLogo">
+                    <img class="imagenlogo" src="/imagenes/logo.png" alt="Logo Alura Latam">
+                </div>   
+            </section>
 
-        <section class="areaDesencriptado">
-        <div id="antes" class="cajaAntes">
-                <div class="muñeco">
-                    <img class="imagenMuñeco" src="/imagenes/Muñeco.png" alt="Imagen descriptiva de que falta algo para desencriptar">
-                </div>
-                <div class="advertenciaSugerencia">
-                    <h2 class="advertencia">Ningún mensaje fue encontrado</h2>
-                    <p class="sugerencia">Ingresa el texto que desees encriptar o desencriptar.</p>
-                </div>
-            </div>
-            <div id="despues" class="cajaDespues">
-                <div class="cajaMensaje">
-                    <p id= "parrafo" class="mensajeResultado"></p>
-                </div>
-                <div class="buttonCopy">                        
-                    <button class="copy" onclick="copiarTexto()">Copiar Texto</button>
-                </div>
-            </div>
-        </section>
-        
-        <section class="areaButton">
-            <div class="mensajeButton">
-                <img class = "imagenExclamacion" src="/imagenes/bi_exclamation-circle-fill.png" alt="Signo de exclamacion"><p>Solo letras minúsculas y sin acentos</p>
-            </div>
-            <div class="cajaButton">
-                <button id="boton1" class="encriptar" onclick= "return encriptar()">Encriptar</button>
-                <button id="boton2" class="desencriptar" onclick= "return desencriptar()">Desencriptar</button>
-            </div>
-        </section>
-        <script src="app.js" defer></script>
-    </main>
+            <section class="contenedorMensajeUsuario">
+                <form id="formulario" class="capturaUsuario">
+                    <textarea name="mensajeAEncriptar" id="mensajeUsuario" class="mensaje" placeholder="Ingrese el texto aqui" required autocomplete="off" autofocus></textarea>
+                </form>
+            </section>
+
+            <section class="contenedorInstruccion">
+                <div class="instruccion"><img class = "imagenExclamacion" src="/imagenes/bi_exclamation-circle-fill.png" alt="Signo de exclamacion"></div>
+                <div class="instruccion">
+                    <p class="mensajeInstruccion">Solo letras minúsculas y sin acentos</p>
+                </div>  
+            </section>
+            
+            <section class="contenedorButton">
+                <div class="button"><button id="boton1" class="encriptar" onclick= "return encriptar()">Encriptar</button></div>
+                <div class="button"><button id="boton2" class="desencriptar" onclick= "return desencriptar()">Desencriptar</button></div> 
+            </section>
     
+            <section class="contenedorDesencriptado">
+                <div id="antes" class="cajaAntes">
+                    <div class="muñeco"><img class="imagenMuñeco" src="/imagenes/Muñeco.png" alt="Imagen descriptiva de que falta algo para desencriptar"></div>
+                    <div class="instruccion2"><h2 class="advertencia">Ningún mensaje fue encontrado</h2></div>
+                    <div class="instruccion2"><p class="sugerencia">Ingresa el texto que desees encriptar o desencriptar.</p></div>                  
+                </div>
+            
+                <div id="despues" class="cajaDespues">
+                    <div class="cajaResultado">
+                        <textarea id= "parrafo" class="mensajeResultado"></textarea>
+                    </div>
+                    <div class="buttonCopy">
+                        <button id="copy" class="copy" onclick="copiarTexto()"><i class='bx bx-clipboard' >Copiar Texto</i></button>
+                    </div> 
+                </div>
+            </section>
+        </div>
+        </main>
+        <footer>
+            <div class="rodapie">1</div>
+        </footer>
+
+    <script src="app.js" defer></script>
 </body>
 </html>

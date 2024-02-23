@@ -1,6 +1,5 @@
 body {
-    /*position: relative;*/
-    width: 100vh;
+    width: 100vw;
     background: #F3F5FC;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -8,222 +7,171 @@ body {
     font-style: normal;
     font-variation-settings: "slnt" 0;
 }
-
-header, .cajaPrincipal, .areaButton{
-    position: relative;
-}
-
-.titulo, .logo, .capturaUsuario, .areaDesencriptado, .muñeco, .advertenciaSugerencia, .cajaMensaje, .copy, .mensajeButton, .cajaButton, .mensajeButton p{
-    position: absolute;
-}
-
-.titulo{
-    width: 55%;
+.contenedor{
+    background: #F3F5FC;
+    width: 90vw;
     height: auto;
-    font-size: 1.9em;
+    position: relative;
+    margin: 0 auto;
+}
+.contenedorLogo, .contenedorMensajeUsuario, .contenedorInstruccion, .contenedorButton{
+    width: 60vw;
+    box-sizing: border-box;
+}
+
+.contenedorTitulo{
+    /*background: red;*/
+    width: 90vw;
+    padding: .5rem;
+    margin: 0 auto;
+}
+header .titulo{
+    width: 100%;
+    font-size: calc(1.6rem + .5vw);
     font-weight: bold;
     color: #0A3871;
-    text-align: left;
-    top: 35px;
-    left: 140px;
+    text-align: center;
 }
 
-.logo {
-   top: 40px;
-    left: 40px;
+.itemLogo{
+    /*background-color: aqua;*/
+    width: 20vw;
+    margin-left: 4.5vw;
+    margin-top: 2.5rem;
+}
+
+.contenedorMensajeUsuario{
+    /*background: violet;*/
+    padding: 2rem 0 2rem 10rem;
+    margin-bottom: 2.5rem;
 }
 .capturaUsuario{
-    background: #F3F5FC;
-    width: 500px;
-    height: 288px;
-    top: 200px;
-    left: 220px;
+    width: 80%;
+    height: 30vh;
 }
-.mensaje::placeholder, .mensaje, .cajaMensaje p{
-    font-size: 32px;
-    line-height: 48px;
-    color: #0A3871;
+textarea::-webkit-scrollbar{
+    width: 0;
 }
-
-
-.mensaje::placeholder{
-    outline: none;
-}
-
 .mensaje{
     width: 100%;
     border: none;
     outline: none;
     background: #F3F5FC;
-    padding: 0;
-    height: auto;
+    padding: 1%;
+    height: 90%;
     resize: none;
 }
-
-textarea::-webkit-scrollbar{
-    width: 0;
-}
-
-.areaDesencriptado{
-    width: 400px;
-    height: 700px;
-    top: 30px;
-    left: 1000px;
-    border-radius: 32px;
-    background: #FFFFFF;
-}
-
-.muñeco{
-    width: 336px;
-    height: auto;
-    top: 133px;
-    left: 32px;
-}
-
-.advertenciaSugerencia{
-    width: 336px;
-    height: 122px;
-    top: 469px;
-    left: 32px;
-    gap: 16px;
-}
-
-.advertencia{
-    width: 336px;
-    height: 58px;
-    font-size: 24px;
-    line-height: 28.8px;
-    text-align: center;
-    font-weight: bold;
-    color: #343A40;
-}
-
-.sugerencia{
-    width: 336px;
-    height: 48px;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    color: #495057;
-
-}
-
-.cajaMensaje{
-    width: 90%;
-    height: 70%;
-    top: 4%;
-    left: 5%;
-}
-
-.cajaMensaje p{
-letter-spacing: 0em;
-text-align: left;
-color: #495057;
-}
-
-.copy{
-    top: 600px;
-    left: 32px;
+.mensaje::placeholder, .mensajeResultado, .mensaje{
+    font-size: calc(1.1rem + .5vw);
+    line-height: 24px   ;
     color: #0A3871;
-    background: none;
-    border: 1px solid #0A3871;
 }
 
-.mensajeButton{
-    width: 229px;
-    height: 18px;
-    top: 590px;
-    left: 220px;
-}
-
-.mensajeButton img, p{
+.instruccion{
     display: inline-block;
+    vertical-align: middle;
+}
+.instruccion img{
+    max-height: 2rem;
+}
+.instruccion p{
+    font-size: calc(.8rem + .5vw);
+    color: #0A3871;
 }
 
-.imagenExclamacion{
-    width: 16px;
-    height: 16px;
+.contenedorButton{
+    margin: 1rem 0;
+    /*background-color: blue;*/
 }
-
-.mensajeButton p{
-    width: 205px;
-    height: 18px;
-    opacity: 0.8px;
-    font-size: 12px;
-    line-height: 18px;
-    margin: 0 0 0 5px;
+.contenedorButton .button{
+    display: inline-block;
+    /*background-color: aquamarine;*/
+    width: 40%;
+    margin: 0 4%;
 }
-
-.cajaButton{
-    width: 680px;
-    height: 67px;
-    top: 628px;
-    left: 220px;
-}
-
 .encriptar, .desencriptar, .copy{
-    width: 328px;
-    height: 67px;
+    width: 100%;
+    height: 100%;
     padding: 24px;
     border-radius: 24px;
     font-size: 18px;
     font-weight: bold;
 }
-
 .encriptar{
     background: #0A3871;
     color: #FFFFFF;
 }
-
-.desencriptar{
+.desencriptar, .copy i{
     color: #0A3871;
     border: 1px solid #0A3871;
 }
 
-@media screen and (max-width:480px) {
-    header, .cajaPrincipal, .areaDesencriptado, .areaButton{
-        display: inline;
-        width: 100vh;
-    }
-    .titulo {
-        width: 250px;
-        font-size: 20px;
-        top: 44px;
-        left: 90px;
-    }
-    .logo {
-        top: 40px;
-        left: 0;
-    }
-    .capturaUsuario{
-        width: 90%;
-        left: 20px;
-    }
-    .mensaje::placeholder{
-        font-size: 24px;
-        text-align: center;
-    }
-    .mensaje{
-        font-size: 24px;
-    }
-    .mensajeButton {
-        top: 500px;
-        left: 20px;
-    }
-    .cajaButton{
-        width: 100%;
-        top: 530px;
-        left: 4%;
-    }
-    .encriptar, .desencriptar{
-        width: 45%;
-    }
-    .areaDesencriptado {
-        width: 90%;
-        left: 5%;
-        top: 630px;
-    }
-
+.contenedorDesencriptado{
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    left: 65%;
+    border-radius: 32px;
+    background: #FFFFFF;
 }
-
-
+.contenedorDesencriptado .cajaAntes{
+    /*background: burlywood;*/
+    width: 80%;
+    height: 80%;
+    margin: 10% 10%;
+    box-sizing: border-box;
+}
+.cajaAntes .muñeco, .instruccion2{
+    /*background-color:chocolate;*/
+    width: 80%;
+    height: auto;
+    margin: 5% 10%;
+}
+.instruccion2{
+    /* background-color: aqua;*/
+    width: 80%;
+    text-align: center;
+}
+.imagenMuñeco{
+    width: 100%;
+}
+.advertencia{
+    font-size: calc(1rem + .5vw);;
+    font-weight: bold;
+    color: #343A40;
+}
+.sugerencia{
+    font-size: calc(.8rem + .5vw);
+    color: #495057;
+}
+.contenedorDesencriptado .cajaDespues{
+   /*  background-color: burlywood;*/
+    width: 90%;
+    height: 90%;
+    margin: 5% 5%;
+}
+.cajaResultado{
+  /*  background-color: aqua;*/
+    width: 90%;
+    height: 80%;
+    margin: 5%;
+}
+.mensajeResultado{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 1%;
+    height: 100%;
+    resize: none;
+}
+.buttonCopy i{
+    font-size: calc(1rem + .5vw);
+    border: none;
+}
+.rodapie{
+    background-color: aqua;
+    width: 90vw;
+    min-height: 5vh;
+    margin: 0 5%;
+}
