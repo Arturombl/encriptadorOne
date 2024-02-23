@@ -77,5 +77,5 @@ function copiarTexto(){
     content.setSelectionRange(0,99999);
     navigator.clipboard.writeText(content.value);
 
-    alert('El texto se a copiado '+ content.value);
+    alert('El texto se a copiado ');
 }
