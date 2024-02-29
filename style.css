@@ -42,12 +42,13 @@ header .titulo{
 
 .contenedorMensajeUsuario{
     /*background: violet;*/
-    padding: 2rem 0 0 10rem;
+    padding: 5% 0 0 12%;
     margin-bottom: 6.5rem;
+    box-sizing: border-box;
 }
 .capturaUsuario{
     width: 80%;
-    height: 30vh;
+    min-height: 30vh;
 }
 textarea::-webkit-scrollbar{
     width: 0;
@@ -201,7 +202,7 @@ button:hover{
     }
     .mensaje::placeholder, .mensajeResultado, .mensaje{
         font-size: calc(.8rem + .5vw);
-        line-height: .4rem;
+        line-height: .8rem;
     }
     .itemLogo{
         width: 35%;
