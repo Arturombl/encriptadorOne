@@ -12,12 +12,12 @@ const textarea = document.querySelector('textarea');
 
 //funcion para validar si solo se escribieron letras minusculas sin acento
 function validar(){
-    const regExp = /[A-Z]/;
+    const regExp = /[a-z]/;
     const input = document.forms['formulario']['mensajeUsuario'];
     if(!input.value) {
         return false;
       } else {
-        if(regExp.test(input.value)){
+        if(!regExp.test(input.value)){
         return false
         }else
         return true;
@@ -38,7 +38,8 @@ function desencriptar() {
 function encriptarDesencriptar(arreglo1, arreglo2, tipo){
     alerta(tipo);
     let isValid = validar();
-    mensaje = document.getElementById('mensajeUsuario').value;
+    let temporal = document.getElementById('mensajeUsuario').value;
+    mensaje = temporal.toLowerCase();
     if(isValid === true){
         for(let i=0;i<letras.length; i++){
             mensaje = mensaje.replaceAll(arreglo1[i],arreglo2[i]);
@@ -51,7 +52,7 @@ function encriptarDesencriptar(arreglo1, arreglo2, tipo){
        Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "solo letras minusculas, intente de nuevo!",
+        text: "solo letras, intente de nuevo!",
       });
       restablecer();
     }
