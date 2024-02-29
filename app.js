@@ -14,8 +14,6 @@ const textarea = document.querySelector('textarea');
 function validar(){
     const regExp = /[A-Z]/;
     const input = document.forms['formulario']['mensajeUsuario'];
-    console.log(!input.value)
-    console.log(!regExp.test(input.value))
     if(!input.value) {
         return false;
       } else {
@@ -28,7 +26,7 @@ function validar(){
 
 //funcion para encriptar
 function encriptar() {
-   encriptarDesencriptar(letras, silavas, 'ent');
+   encriptarDesencriptar(letras, silavas, 'enc');
 }
 
 //funcion para desencriptar
@@ -38,14 +36,12 @@ function desencriptar() {
 
 //funcion proceso de encriptado y desencriptado
 function encriptarDesencriptar(arreglo1, arreglo2, tipo){
-    console.log(tipo);
     alerta(tipo);
     let isValid = validar();
     mensaje = document.getElementById('mensajeUsuario').value;
     if(isValid === true){
         for(let i=0;i<letras.length; i++){
             mensaje = mensaje.replaceAll(arreglo1[i],arreglo2[i]);
-            console.log(mensaje);
         }
 
         restablecer();
@@ -90,7 +86,6 @@ function copiarTexto(){
     alerta('cop');
 }
 function alerta(tipo){
-    console.log(tipo);
     let mensajeAlerta;
     switch (tipo){
         case 'enc':
@@ -104,7 +99,7 @@ function alerta(tipo){
             break;
     }
     Swal.fire({
-        position: "top-end",
+        position: "center",
         icon: "success",
         title: mensajeAlerta,
         showConfirmButton: false,
