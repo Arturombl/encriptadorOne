@@ -1,6 +1,7 @@
 let mensaje;
 const letras = ['e', 'i', 'a', 'o', 'u'];
 const silavas = ['enter', 'imes', 'ai', 'ober', 'ufat'];
+const verificacion = [];
 
 //funcion que permite tener un textArea dinamico
 const textarea = document.querySelector('textarea');
@@ -42,7 +43,13 @@ function encriptarDesencriptar(arreglo1, arreglo2, tipo){
     mensaje = temporal.toLowerCase();
     if(isValid === true){
         for(let i=0;i<letras.length; i++){
-            mensaje = mensaje.replaceAll(arreglo1[i],arreglo2[i]);
+           if(mensaje.includes(arreglo1[i]))
+           verificacion.push(i);    
+        }
+        console.log(verificacion);
+        for(let i=0;i<verificacion.length; i++){
+            mensaje = mensaje.replaceAll(arreglo1[verificacion[i]],arreglo2[verificacion[i]]);
+            console.log(mensaje);
         }
 
         restablecer();
